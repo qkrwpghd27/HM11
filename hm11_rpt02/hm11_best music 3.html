@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다.-->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title> hm11 Best 3 Music </title>
+		<style>
+			
+		
+		</style>
+		<script>
+			function load() {
+			  var select = document.getElementById("site");
+			  window.location = select.options[select.selectedIndex].value;
+			}
+			function openURL() {
+			  var select = document.getElementById("site");
+			  url = select.options[select.selectedIndex].value;
+			  //document.write(url);
+			  window.open(url, "myWin", "left=300,top=300,width=1000,height=800");
+			}
+			  </script>
+	</head>
+
+	<body>
+		<h3>Best 3 Music</h3>
+		<hr />
+		Music :
+		<select id="site" onchange="openURL();">
+		  <option value="#">Select Music </option>
+		  <option value="HM11_music home1.html"> 사랑인가 봐 </option>
+		  <option value="HM11_music home2.html"> 이제 나만 믿어요 </option>
+		  <option value="HM11_music home3.html"> TOMBOY </option>
+		</select>
+	</body>
+
+</html>
