@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm11 : Javascript BOM</title>
+    <style></style>
+
+    <script>
+      function load() {
+        var select = document.getElementById("music");
+        window.location = select.options[select.selectedIndex].value;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>hm11 favorite 3 Music</h3>
+    <hr />
+    노래 선택 :
+    <select id="music">
+      <option value="https://www.youtube.com/watch?v=t2rmf3LRajwo" selected>(여자)아이들 TOMBOY </option>
+      <option value="https://www.youtube.com/watch?v=8dJyRm2jJ-U">싸이 that that </option>
+      <option value="https://www.youtube.com/watch?v=35lirBqwgTs">미연 Drive </option>
+    </select>
+
+    <p>
+      <button onclick="load()">노래 관련 사이트로 접속</button>
+    </p>
+  </body>
+</html>
