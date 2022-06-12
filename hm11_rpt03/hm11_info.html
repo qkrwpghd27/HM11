@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm11 : info</title>
+		<style>
+			body{
+				background-color:rgb(151, 194, 229);
+			}
+
+			ul{
+				margin-left: 22%;
+				width: 50%;
+				background : #611ecc;
+				padding : 10px 10px 10px 50px;
+				/* list-style-position: inside; */ 
+				
+			}
+			
+			ul li{ /* ul의 자손 li */
+				font-size: 40pt;
+				color: black;
+				background: #aedceb;
+				margin-bottom: 5px;
+				font-family: 'Nanum Pen Script', cursive;
+				
+			}
+			.multiEffect {
+				color: black;
+				text-shadow: 2px 2px 2px white, 0 0 25px white, 0 0 5px white;
+			}
+			h1{
+				text-align: center;
+			}
+			span:hover{
+				font-size: 70pt;
+				color:#412ee7;
+			}
+
+			
+			
+		</style>
+		<script>
+			function change(obj, size, color) {
+			obj.style.color = color;
+			obj.style.fontSize = size;
+		}
+		var width = 1;
+      // 테두리 두깨
+      function down(obj) {
+        obj.style.fontStyle = "italic";
+      }
+
+      function up(obj) {
+        obj.style.fontStyle = "normal";
+      }
+
+      function over(obj) {
+        obj.style.borderColor = "Blue";
+        // 테두리 폭이 0일 때 색은 보이지 않는다.
+      }
+
+      function out(obj) {
+        obj.style.borderColor = "skyblue";
+      }
+
+      function wheel(e,obj) {
+        if (e.wheelDelta < 0) {
+          width--;
+          if (width < 0) width = 0;
+
+        } 
+        else width++; 
+        obj.style.borderStyle = "ridge";
+        obj.style.borderWidth = width + "px";
+      }
+		</script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<br><h1 class="multiEffect"><span2 
+			onmousedown="down(this)" 
+			onmouseup="up(this)" 
+			onmouseover="over(this)" 
+			onmouseout="out(this)" 
+			onwheel="wheel(event,this)"
+			style="display:inline-block">HM11</span2></h1>
+	   <!-- <hr>  -->
+	 
+		<ul>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">	
+			<strong>
+				<li>이름 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">박제홍</span>
+				<li>나이 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">23세</span>
+				<li>학교 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">인제대학교</span>
+				<li>학과 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">드론IOT시뮬레이션학부</span>
+				<li>학번 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">20192577</span>
+				<li>ID : <span class="HM21" onclick="change(this, '25px', 'royalblue')">HM11</span>
+				<li>전화번호 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">010-xxxx-6923</span>
+				<li>주소 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">부산광역시 연제구</span>
+				<li>취미 : <span class="HM21" onclick="change(this, '25px', 'royalblue')">배구 영화감상 집콕</span>
+				</strong>
+		</ul>
+
+
+	</body>
+
+</html>

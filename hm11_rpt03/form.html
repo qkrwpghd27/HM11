@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 모집</title>
+	<link rel="stylesheet" href="form.css">
+    <style></style>
+</head>
+<body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+	<h2>HTML동호회</h2>
+	<form action="#" >
+		<fieldset>
+				<legend>login</legend>
+				<label for="putid">아이디 : </label>
+				<input type="text" id="putid" placeholder="아이디입력"><br>
+				<label for="putpassword">비밀번호: </label>
+				<input type="password" id="putpassword" placeholder="비밀번호입력"><br>
+				<button type="button" onclick="location.href='forminid.html' ">회원가입</button><button>아이디/비밀번호찾기</button>
+		</fieldset>
+	</form>
+
+</body>
+</html>
+
+
+    <style></style>
+    <script>
+      // 미리 로딩해둘 이미지 이름 배열
+      var files = [
+        "media/김연경.jpg",
+        "media/박철우.jpg",
+        "media/양효진.jpg",
+        "media/한선수.jpg",
+        "media/여오현.jpg"
+      ];
+      var imgs = new Array();
+      for (var i = 0; i < files.length; i++) {
+        imgs[i] = new Image(); // 메모리에 이미지 객체 생성
+        imgs[i].src = files[i]; // 이미지 로딩
+      }
+      
+      // 다음 이미지 출력
+      var next = 1;
+      function change(img) {
+        img.src = imgs[next].src; // 이미지 변경
+        var nameSplit = files[next].split('/');
+        var infoText = document.getElementById("info");
+        var nameText = document.getElementById("name");
+        var sizeText = document.getElementById("size");
+        infoText.innerHTML = "<strong>" + " Information" + "</strong>";
+        nameText.innerHTML = "Name : " + nameSplit[1]; // 이벤트 객체의 프로퍼티 출력
+        sizeText.innerHTML = "Width : " + img.width + "<br>" + "Height : " + img.height;
+        next++; // 다음 이미지
+        next %= imgs.length; // 개수를 넘으면 처음으로
+      }
+      function init(img) {
+        var nameSplit = files[next - 1].split('/');
+        var infoText = document.getElementById("info");
+        var nameText = document.getElementById("name");
+        var sizeText = document.getElementById("size");
+        img.src = files[next - 1];
+        infoText.innerHTML = "<strong>" + " Information" + "</strong>";
+        nameText.innerHTML = " Name: " + nameSplit[1]; // 이벤트 객체의 프로퍼티 출력
+        sizeText.innerHTML = "Width : " + img.width + "<br>" + "Height : " + img.height;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>배구 선수들</h3>
+    <hr />
+    이미지를 클릭하면 다음 이미지와 정보를 보여줍니다.
+    <p>
+      <img
+        style="border:20px ridge wheat"
+        src="media/한선수.jpg"
+        alt="."
+        
+        onclick="change(this)"
+        onload="init(this)"
+      />
+      <p id="info"></p>
+      <p id="name"></p>
+      <p id="size"></p>
+    </p>
+  </body>
+</html>

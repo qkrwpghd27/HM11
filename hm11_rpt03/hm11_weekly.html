@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: rgb(151, 194, 229);
+      height: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-top: 100px;
+      
+    }
+
+    div.box {
+      background: white;
+      width: 700px;
+      height: 600px;
+      margin-left: -350px;
+      position: relative;
+      top: 50px;
+      left: 50%;
+      
+      /* transform: translate(-50%,-50%); */
+      
+      
+      border: 2px solid black;
+    }
+
+    table {
+      border-collapse: collapse;
+      
+    }
+
+    td,
+    th {
+      text-align: center;
+      padding: 5px;
+      height: 40px;
+      width: 250px;
+      font-family: 'Hi Melody', cursive;
+      font-size: 24px;
+    }
+
+    thead {
+      background: rgb(109, 117, 233);
+      border: 2px solid black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    tbody tr:nth-child(even) {
+      background: floralwhite;
+    
+    }
+
+    div.box {
+        background: white; width: 700px; height: 560px; margin-left: -350px;
+        position: fixed; top: 200px; left: 50%; box-shadow: 50px 40px #1444e2;
+        }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>주말 일정표</h1>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+
+    <div class="box">
+      <table>
+        <thead>
+          <tr>
+            <th>시작 시간</th>
+            <th>끝 시간</th>
+            <th>일과</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>AM 07:00</th>
+            <th>AM 08:00</th>
+            <th>기상</th>
+          </tr>
+          <tr>
+            <th>AM 08:00</th>
+            <th>AM 10:30</th>
+            <th>알바</th>
+          </tr>
+          <tr>
+            <th>AM 10:30</th>
+            <th>AM 11:00</th>
+            <th>아침 겸 점심</th>
+          </tr>
+          <tr>
+            <th>AM 11:00</th>
+            <th>PM 01:30</th>
+            <th>알바</th>
+          </tr>
+          <tr>
+            <th>PM 01:30</th>
+            <th>PM 04:30</th>
+            <th>알바 쉬는시간</th>
+          </tr>
+          <tr>
+            <th>PM 04:30</th>
+            <th>PM 06:00</th>
+            <th>알바</th>
+          </tr>
+          <tr>
+            <th>PM 06:00</th>
+            <th>PM 09:00</th>
+            <th>배구</th>
+          </tr>
+          <tr>
+            <th>PM 09:00</th>
+            <th>PM 10:00</th>
+            <th>늦은 저녁</th>
+          </tr>
+          <tr>
+            <th>PM 10:00</th>
+            <th>PM 11:00</th>
+            <th>씻고 쉬기</th>
+          </tr>
+          <tr>
+            <th>PM 11:00</th>
+            <th>다음날 아침</th>
+            <th>취침</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

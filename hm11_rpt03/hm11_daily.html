@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: rgb(151, 194, 229);
+      height: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-top: 100px;
+      
+    }
+
+    div.box {
+      background: white;
+      width: 700px;
+      height: 470px;
+      margin-left: -350px;
+      position: relative;
+      top: 30px;
+      left: 50%;
+      
+      border: 2px solid black;
+    }
+
+    table {
+      border-collapse: collapse;
+      
+    }
+
+    td,
+    th {
+      text-align: center;
+      padding: 5px;
+      height: 40px;
+      width: 250px;
+      font-family: 'Hi Melody', cursive;
+      font-size: 24px;
+    }
+
+    th:hover{
+        background: red;
+      }
+
+    thead {
+      background: rgba(231, 48, 35, 0.644);
+      border: 2px solid black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    tbody tr:nth-child(even) {
+      background: floralwhite;
+      
+    }
+
+    div.box {
+        background: white; width: 700px; height: 470px; margin-left: -350px;
+        position: fixed; top: 200px; left: 50%; box-shadow: 30px 20px #e03131;
+        }
+
+          
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>평일 일정표</h1>
+
+    <strong><a onclick="return dailylf()" href="hm11_etime.html" style="color: blue; right: 780px; top: 110px;">[[[[학교 시간표]]]]</a></strong>
+    
+    <script>
+      function dailylf() {
+      var dalf = confirm("시간표 페이지로 넘어갈까요...?");
+      return dalf;
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+   
+
+    <div class="box">
+      <table>
+        <thead>
+          <tr>
+            <th>시작 시간</th>
+            <th>끝 시간</th>
+            <th>일과</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>AM 06:00</th>
+            <th>AM 08:00</th>
+            <th>기상 및 아침 식사</th>
+          </tr>
+          <tr>
+            <th>AM 08:00</th>
+            <th>AM 09:00</th>
+            <th>등교 준비</th>
+          </tr>
+          <tr>
+            <th>AM 09:00</th>
+            <th>PM 01:00</th>
+            <th>오전 강의</th>
+          </tr>
+          <tr>
+            <th>PM 01:00</th>
+            <th>PM 02:00</th>
+            <th>- 점심 시간 -</th>
+          </tr>
+          <tr>
+            <th>PM 02:00</th>
+            <th>PM 06:00</th>
+            <th>오후 강의</th>
+          </tr>
+          <tr>
+            <th>PM 06:00</th>
+            <th>PM 07:00</th>
+            <th>- 저녁 시간 -</th>
+          </tr>
+          
+          <tr>
+            <th>PM 07:30</th>
+            <th>PM 10:00</th>
+            <th>과제 및 개인 공부</th>
+          </tr>
+          <tr>
+            <th>PM 10:30~</th>
+            <th>하루의 끝</th>
+            <th>취침</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
